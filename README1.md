@@ -43,26 +43,26 @@ Ultimately, the goal is to move from a reactive approach to fraud management to 
 
 this project focuses on building a machine learning model to predict online fraud using the provided dataset. Here's a clear overview based on the notebook:
 
-Problem Statement: Predict fraudulent transactions in online payment data.
+##SUMMARY.
+###Problem Statement: Predict fraudulent transactions in online payment data.
 
-Key Features: The dataset includes transaction details such as step, type, amount, account balances (oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest), originator and destination account IDs (nameOrig, nameDest), and a target variable indicating fraud (isFraud).
+###Key Features: The dataset includes transaction details such as step, type, amount, account balances (oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest), originator and destination account IDs (nameOrig, nameDest), and a target variable indicating fraud (isFraud).
 
-Approach: The project follows the CRISP-DM methodology:
+###Approach: The project follows the CRISP-DM methodology:
 
-Business Understanding: Understand the business problem of online fraud, its impact, costs of errors, types of fraud, and success criteria.
-Data Understanding: Load and explore the dataset, examining its structure, descriptive statistics, unique values, missing values, and the distribution of the target variable.
-Data Preparation: Handle missing values, drop irrelevant columns (isFlaggedFraud, nameOrig, nameDest), one-hot encode the type feature, and scale numerical features. The data is then split into stratified training and testing sets.
-Modeling: A RandomForestClassifier with balanced class weights is selected and trained to address the class imbalance.
-Evaluation: The model's performance is evaluated using a classification report and confusion matrix, focusing on metrics like precision and recall for the fraudulent class.
-Deployment (Discussion): Discusses considerations for deploying the model in a real-time environment, including technical infrastructure, challenges for low latency and high availability, and ongoing maintenance and retraining.
-Prediction: The trained model is used to make predictions on new data, specifically predicting the probability of fraud for individual transactions via an interactive form.
-Libraries Used:
+####Business Understanding: Understand the business problem of online fraud, its impact, costs of errors, types of fraud, and success criteria.
+####Data Understanding: Load and explore the dataset, examining its structure, descriptive statistics, unique values, missing values, and the distribution of the target variable.
+####Data Preparation: Handle missing values, drop irrelevant columns (isFlaggedFraud, nameOrig, nameDest), one-hot encode the type feature, and scale numerical features. The data is then split into stratified training and testing sets.
+####Modeling: A RandomForestClassifier with balanced class weights is selected and trained to address the class imbalance.
+####Evaluation: The model's performance is evaluated using a classification report and confusion matrix, focusing on metrics like precision and recall for the fraudulent class.
+####Deployment (Discussion): Discusses considerations for deploying the model in a real-time environment, including technical infrastructure, challenges for low latency and high availability, and ongoing maintenance and retraining.
+####Prediction: The trained model is used to make predictions on new data, specifically predicting the probability of fraud for individual transactions via an interactive form.
 
-pandas: For data loading, exploration, and manipulation.
-numpy: For numerical operations.
-sklearn.preprocessing.StandardScaler: For scaling numerical features.
-sklearn.model_selection.train_test_split: For splitting data into training and testing sets.
-sklearn.ensemble.RandomForestClassifier: For building the classification model.
-sklearn.metrics.classification_report, sklearn.metrics.confusion_matrix: For evaluating the model's performance.
-ipywidgets, IPython.display: For creating the interactive form and displaying output.
-os: For interacting with the operating system, used here to check file sizes.
+##Libraries Used:
+
+###pandas: For data loading, exploration, and manipulation.
+###numpy: For numerical operations.
+###sklearn.preprocessing.StandardScaler: For scaling numerical features.
+###sklearn.model_selection.train_test_split: For splitting data into training and testing sets.
+###sklearn.ensemble.RandomForestClassifier: For building the classification model.
+###sklearn.metrics.classification_report, sklearn.metrics.confusion_matrix: For evaluating the model's performance.
