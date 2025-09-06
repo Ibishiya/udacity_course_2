@@ -43,7 +43,7 @@ Ultimately, the goal is to move from a reactive approach to fraud management to 
 
 this project focuses on building a machine learning model to predict online fraud using the provided dataset. Here's a clear overview based on the notebook:
 
-##SUMMARY.
+**SUMMARY.
 ###Problem Statement: Predict fraudulent transactions in online payment data.
 
 ###Key Features: The dataset includes transaction details such as step, type, amount, account balances (oldbalanceOrg, newbalanceOrig, oldbalanceDest, newbalanceDest), originator and destination account IDs (nameOrig, nameDest), and a target variable indicating fraud (isFraud).
